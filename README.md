@@ -11,4 +11,5 @@ That is why I decided to make a version on Online Sequencer, which was extremely
 This is pretty similar to what I wanted the final product to look like. I did want it to be more game like and have the image bouncing around in an actual map, but I decided against it and instead decided to make the image hit other images and make them "explode". This suggestion was made by my TA, shoutout it made the project 10x funnier. Also I originally started out by making this using Turtle and while it did bounce around in a square, I found it difficult to make it similar my vision of it being a map and moving around. So while I was unsure what to do, after some YouTube searches, that's when I found CodeCC's video and I followed along. 
 
  Here's the link to the Online Sequencer I made: https://onlinesequencer.net/5042954
+ 
  Here's the link to the YouTube video I followed: https://youtu.be/m2Yo1_Mb6QY?si=B848YILLJcDKKkbL
