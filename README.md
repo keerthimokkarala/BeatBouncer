@@ -14,3 +14,5 @@ This is pretty similar to what I wanted the final product to look like. I did wa
  Here's the link to the Online Sequencer I made: https://onlinesequencer.net/5042954
  
  Here's the link to the YouTube video I followed: https://youtu.be/m2Yo1_Mb6QY?si=B848YILLJcDKKkbL
+
+ Here's the link the screen recording: https://1drv.ms/v/c/d427922b9db5cc21/ER-54Gls1OFKmwB3MxTpRiMBeiJwLYv5Ik_bXDD3uTBGmA?e=hoCkQc 
