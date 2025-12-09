@@ -16,7 +16,7 @@ def list_notes_from_midi(file_path):
                 current_instruments[msg.channel] = msg.program
             if msg.type == 'note_on' and msg.velocity > 0:
                 note_name = msg.note
-                instrument = current_instruments.get(msg.channel, 0)  # Default to instrument 0 if not set
+                instrument = current_instruments.get(msg.channel, 0)  
                 all_notes.append({
                     'name': note_name,
                     'start_time': absolute_time,
@@ -26,7 +26,7 @@ def list_notes_from_midi(file_path):
                 })
             if msg.type == 'note_off' or (msg.type == 'note_on' and msg.velocity == 0):
                 note_name = msg.note
-                instrument = current_instruments.get(msg.channel, 0)  # Default to instrument 0 if not set
+                instrument = current_instruments.get(msg.channel, 0)
                 all_notes.append({
                     'name': note_name,
                     'start_time': absolute_time,
