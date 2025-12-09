@@ -17,12 +17,12 @@ class Explosion:
 
     def update(self, dt):
         self.timer += dt
-        self.size += 100 * dt  # grow the image over time
+        self.size += 100 * dt 
 
     def draw(self, screen, camera):
-        # Scale the image based on size
+       
         scaled_img = pygame.transform.scale(self.image, (int(self.size), int(self.size)))
-        # Apply camera
+        
         pos = camera.apply_pos(self.pos) - Vector2(self.size / 2, self.size / 2)
         screen.blit(scaled_img, pos)
 
@@ -44,10 +44,10 @@ class Game:
         self.time = 0
         self.fixedDeltaTime = 0.016
 
-        # Load image for circle and explosions
+        
         self.point_image = pygame.image.load("rick.png").convert_alpha()
 
-        # Store explosions
+        
         self.explosions = []
 
     def update(self):
@@ -55,7 +55,7 @@ class Game:
 
         for note in self.all_notes:
 
-            # NOTE ON event
+            
             if note["start_time"] <= self.time and not note["play"] and note["velocity"] > 0:
                 note["play"] = True
 
@@ -66,7 +66,7 @@ class Game:
 
                 self.square.vel.y *= -1
 
-                # Add explosion using image
+              
                 self.explosions.append(Explosion(pos, self.point_image))
 
                 utils.player.note_on(
@@ -74,7 +74,7 @@ class Game:
                     min(note["velocity"] * utils.volumeScale, 127)
                 )
 
-            # NOTE OFF event
+          
             if note["start_time"] <= self.time and not note["play"] and note["velocity"] == 0:
                 note["play"] = True
                 utils.player.note_off(note["name"], 0)
@@ -82,18 +82,18 @@ class Game:
         self.square.update(self.fixedDeltaTime)
         self.camera.update()
 
-        # Update explosions
+    
         for explosion in self.explosions[:]:
             explosion.update(self.fixedDeltaTime)
             if explosion.is_done():
                 self.explosions.remove(explosion)
 
     def draw(self):
-        # Draw explosions
+       
         for explosion in self.explosions:
             explosion.draw(utils.screen, self.camera)
 
-        # Optionally draw original points as images
+        
         for p in self.points:
             pos = self.camera.apply_pos(Vector2(p.x, p.y))
             img_rect = self.point_image.get_rect(center=pos)
