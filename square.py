@@ -15,7 +15,7 @@ class Square:
         self.pos = Vector2(pos)
         self.vel = Vector2(550, 800)
 
-        # Trail
+        
         self.trail = []
         self.trail_lifetime = 10
 
